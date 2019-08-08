@@ -1,9 +1,19 @@
-// import React from 'react';
+ import React from 'react';
 // import PhotoItem from './PhotoItem';
 
-import React, { Component } from 'react';
+//import React, { Component } from 'react';
 
-class Photo extends Component {
+const Photo = props => (
+    <li className="photo-wrap">
+        <img src={props.url} alt=""/>
+    </li>
+);
+
+export default Photo;
+
+
+
+/*class Photo extends Component {
     render() {
         return (
             <div class="photo-container">
@@ -21,7 +31,7 @@ class Photo extends Component {
                     <li>
                         <img src="https://farm5.staticflickr.com/4425/36337012384_ba3365621e.jpg" alt="" />
                     </li>
-                    {/* Oh no, not found */}
+                    {  }
                     <li class="not-found">
                         <h3>No Results Found</h3>
                         <p>You search did not return any results. Please try again.</p>
@@ -30,6 +40,6 @@ class Photo extends Component {
             </div>
         );
     }
-}
+};*/
 
-export default Photo;
+//export default Photo;
