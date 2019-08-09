@@ -5,8 +5,8 @@ const PhotoList = props => {
 
     const results = props.data;
     let photo = results.map(photo =>
-        <Photo />
-        //<Photo url={photo.images.fixed_height.url} key={photo.id} />
+        
+        <Photo url={photo.images.fixed_height.url} key={photo.id} />
         );
 
     return (
