@@ -1,18 +1,18 @@
 import React from 'react';
 import Photo from './Photo';
 
-const PhotoList = props => {
+const PhotoList = (props) => {
 
     const results = props.data;
-    let photo = results.map(photo =>
-        
-        <Photo url={photo.images.fixed_height.url} key={photo.id} />
+    let photo = results.map(photo => <Photo url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id} />
         );
-
+        
     return (
-        <ul className="photo-list">
-           <Photo />
-        </ul>
+        <div className="photo-container">
+         <ul className="photo-list">
+           {photo}
+         </ul>
+        </div>
     );
 };
 

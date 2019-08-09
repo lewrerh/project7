@@ -9,6 +9,11 @@ const Photo = props => (
     </li>
 );
 
+const results = props.data;
+//let photo:
+    //if (results.length > 0) {
+      //  photo = results.map(photo => <Photo url(photo.images.fixed_.url}))
+   // }
 export default Photo;
 
 

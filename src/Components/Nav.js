@@ -1,36 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-
-const Nav = () => {
-  return (
+export default class Nav extends Component {
+  pageLink = e => {
+      this.props.onClick(e.target.innerText);
+      this.props.istrue(true);
+  }
+  render() {
+    return (
       <nav className="main-nav">  
         <ul>
           <li><NavLink to='/lilies'>Lilies</NavLink></li>
           <li><NavLink to='/lakes'>lakes</NavLink></li>
-          <li><NavLink to='/pupies'>pupiess</NavLink></li>
+          <li><NavLink to='/puppies'>puppies</NavLink></li>
         </ul>
       </nav>
-  );
+    );
+  }
 }
-
-export default Nav;
-
-///*do nav links here...props if needed
-
-// import React from 'react';
-// import PropTypes from 'prop-types';
-
-// const Nav = props => {
-//   return (
-//     <div>
-      
-//     </div>
-//   );
-// };
-
-// Nav.propTypes = {
-  
-// };
-
-// export default Nav;
