@@ -5,8 +5,8 @@ import './App.css';
 import PhotoList from './Components/PhotoList';
 import Nav from './Components/Nav';
 import NotFound from './Components/NotFound';
-import SearchForm from './Components/SearchForm';
-//import Search from './Components/Search';
+import SearchForm from './Components/Search';
+import Search from './Components/Search';
 import apiKey from './config.js';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
