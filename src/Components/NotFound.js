@@ -1,6 +1,6 @@
 import React  from 'react';
 
-const NotFound = () => {
+const NotFound = () => {    //Created NotFound component and error message when seach not found with 404 No resusults
    return (
 
      <div className="photo-container">

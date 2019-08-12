@@ -1,9 +1,9 @@
 import React from 'react';
 
-const NoMatchesFound = () => {
+const NoMatchesFound = () => {   //Created NoMatchesFound with message for user if typing unsearchable fields
     return (
         <div className="photo-container">
-            <h2>Sorry there were no matches</h2>
+            <h2>Sorry, there were no matches</h2>
             <ul>
                 <li className="not-found">
                     <h2>404</h2>

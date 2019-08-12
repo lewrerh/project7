@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-import Photo from './Components/Photo';
+//import Photo from './Components/Photo';
 import PhotoList from './Components/PhotoList';
 import Nav from './Components/Nav';
 import NotFound from './Components/NotFound';
 import SearchForm from './Components/SearchForm';
-import Search from './Components/Search';
+//import Search from './Components/Search';
 import apiKey from './config.js';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-
 
 export default class App extends Component {
     constructor() {
@@ -24,6 +22,9 @@ export default class App extends Component {
     componentDidMount() {
 
         // Get the lilies
+//Setup the routes in the render method for children
+
+
         axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=lilies&per_page=24&format=json&nojsoncallback=1`)
             .then(response => {
               
@@ -63,29 +64,31 @@ export default class App extends Component {
 
             });
     }
-    //Setup the routes in the render method
+
+    // Setup the routes in the render method
     render() {
-      return (
-          <BrowserRouter>
-           <div>
-              <div className="container">
-                   <h1>PhotoSearch</h1>
-                      <SearchForm />
-                       <Nav />    
-                  </div>
-                  <div className="container">
-                    <Switch>
-                      <Route exact path="/Search" component={Search} />
-                      <Route exact path="/" render={() => <PhotoList data={this.state.photoList.lilies} />} />
-                      <Route exact path="/lilies" render={() => <PhotoList data={this.state.photoList.lilies} />} />
-                      <Route exact path="/lakes" render={() => <PhotoList data={this.state.photoList.lakes} />} />
-                      <Route exact path="/ballons" render={() => <PhotoList data={this.state.photoList.ballons} />} />
-                      <Route component={NotFound} />
-                    </Switch>
-              </div>
-           </div>
-          </BrowserRouter>
-      );
-  }
+        return (
+            <BrowserRouter>
+             <div>
+                <div className="container">
+                     <h1>PhotoSearch</h1>
+                        <SearchForm />
+                         <Nav />    
+                    </div>
+                    <div className="container">
+                      <Switch>
+                        <Route exact path="/Search" component={Search} />
+                        <Route exact path="/" render={() => <PhotoList data={this.state.photoList.lilies} />} />
+                        <Route exact path="/lilies" render={() => <PhotoList data={this.state.photoList.lilies} />} />
+                        <Route exact path="/lakes" render={() => <PhotoList data={this.state.photoList.lakes} />} />
+                        <Route exact path="/ballons" render={() => <PhotoList data={this.state.photoList.ballons} />} />
+                        <Route component={NotFound} />
+                      </Switch>
+                </div>
+             </div>
+            </BrowserRouter>
+        );
+    }
 
 }
+
