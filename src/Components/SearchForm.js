@@ -16,10 +16,9 @@ export class SearchForm extends Component {
   handleSubmit = e => {                  //Event begins after form submitted/performSearch
     e.preventDefault();
     this.props.onSearch(this.query.value);
-
     let query = this.query.value;
 
-      let path = `/performSearh/${query}`;
+      let path = `/performSearch/${query}`;
       this.props.history.push(path);
       this.props.onSearch(this.state.searchText, true);
 
