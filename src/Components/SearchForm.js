@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 
 
 
-export class SearchForm extends Component {
+export class SearchForm extends Component {    
   state = {
     searchText: ''
   }
 
-  onSearchChange = e => {
+  onSearchChange = e => {                     //User's input
     this.setState({ searchText: e.target.value });
   }
 
-  handleSubmit = e => {
+  handleSubmit = e => {                  //Event begins after form submitted/performSearch
     e.preventDefault();
     this.props.onSearch(this.query.value);
 
@@ -26,7 +26,7 @@ export class SearchForm extends Component {
     e.currentTarget.reset();
   }
 
-render() {
+render() {                                       //return results
   return (
             <form className="search-form" onSubmit={this.handleSubmit} >
                <input type="searchText" 

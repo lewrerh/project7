@@ -4,7 +4,7 @@ const NotFound = props => (   //Created NotFound component and error message whe
 
            <li className="not-found">
            { /*<h2>404</h2>*/}
-           <i className="material-icons icon-photo">sentiment_very_dissatisfied</i>
+           <i className="material-icons icon-photo"></i>
            <h3>So sorry, something went wrong</h3>
            </li>
      
