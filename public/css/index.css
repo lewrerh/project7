@@ -2,6 +2,7 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #3f4850;
+  background-color: lightcyan;
 }
 
 h2 {
@@ -23,14 +24,15 @@ a {
   max-width: 460px;
   display: flex;
   margin: 0 auto 32px;
+  border-radius: 1.5em 1.5em;
 }
 
 .search-form button {
   outline: none;
-  background-color: #e1c8f8;
+  background-color: #f8f;
   border: none;
   padding: 0px 15px;
-  border-radius: 0 0.35em 0.35em 0;
+  border-radius: 0 1.5em 1.5em 0;
   cursor: pointer;
 }
 
@@ -52,8 +54,8 @@ input {
 
 .main-nav a {
   display: block;
-  background: #438bbd;
-  border-radius:15px;
+  background: teal;
+  border-radius:50px;
   padding: 5px;
   color: #fff;
 }
@@ -61,7 +63,7 @@ input {
 .main-nav .active,
 .main-nav a:hover,
 .search-form button:hover {
-  background-color: #532770;
+  background-color: purple;
 }
 
 .photo-container ul {
@@ -82,11 +84,15 @@ input {
 .photo-container ul img {
   width: 100%;
   transform: scale(1.25);
-  transition: transform 1.25s;
+  transition: transform 1.75s;
+  /* border-radius: 500px x 500px; */
 }
 
 .photo-container li:hover img {
   transform: scale(1.65);
+}
+.not-found {
+  list-style-type:nont
 }
 
 .photo-container .not-found {

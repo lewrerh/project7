@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-//import Photo from './Components/Photo';
 import PhotoList from './Components/PhotoList';
 import Nav from './Components/Nav';
 import NotFound from './Components/NotFound';
+import NoMatchesFound from'./Components/NoMatchesFound';
 import SearchForm from './Components/SearchForm';
-//import Search from './components/Search';
 import apiKey from './config.js';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -49,7 +48,7 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
           <div className="container">
-            <h1>PhotoSearch</h1>
+            <h1>Rhonda’s Photo Pleasantries</h1>
           </div>
         </div>
         <div className="container">

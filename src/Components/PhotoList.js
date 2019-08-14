@@ -1,6 +1,6 @@
 import React from 'react';
 import Photo from './Photo';
-import NotFound from './NotFound';
+import NoMatchesFound from'./NoMatchesFound';
 
 const PhotoList = props => {
 
@@ -11,7 +11,7 @@ const PhotoList = props => {
         photos = results.map(photo => <Photo url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id} />);
         
       } else {
-        photos = <NotFound />
+        photos = <NoMatchesFound />
       }
     
       
