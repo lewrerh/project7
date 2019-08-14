@@ -5,7 +5,7 @@ const NotFound = props => {   //Created NotFound component and error message whe
   return (
            <li className="not-found">
            <i className="material-icons icon-photo"></i>
-           <h3>So sorry, something went wrong</h3>
+           <h3>So sorry, no images found</h3>
            </li>
      
    );

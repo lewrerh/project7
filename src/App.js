@@ -47,7 +47,7 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
           <div className="container">
-            <h1><b>Rhonda’s Photo Pleasantries</b></h1>
+            <h1><b>Rhonda’s Photo Pleasantries...</b></h1>
           </div>
         </div>
         <div className="container">

@@ -2,7 +2,7 @@
 
 const Photo = props => (
     <li className="container">
-        <img src={props.url} alt=""/>
+        <img src={props.url} alt="flicker img not found"/>
     </li>
 );
 export default Photo;
