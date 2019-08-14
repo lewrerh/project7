@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react';   //Used React and each module set up seperately using React components to pull API
 import axios from 'axios';
 import './App.css';
 import PhotoList from './Components/PhotoList';
@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 export default class App extends Component {
 
-  constructor() {
+  constructor() {        //Contructor is initialed designed for super to display photos per Flicker.
     super();
     this.state = {
       photo: [],
@@ -18,16 +18,16 @@ export default class App extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount() {             //Called after component is added to fetch the data. 
     this.performSearch("lilies");
   }
 
-  isTrue = (istrue = true) => {
+  isTrue = (istrue = true) => {     //Loading is added for user while awaiting photo to display
     this.setState({
       loading: istrue
     });
   }
-  // Get the lilies
+
   //Setup the routes in the render method for children
 
   performSearch = (query ) => {
@@ -47,7 +47,7 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
           <div className="container">
-            <h1>Rhonda’s Photo Pleasantries</h1>
+            <h1><b>Rhonda’s Photo Pleasantries</b></h1>
           </div>
         </div>
         <div className="container">
@@ -69,3 +69,6 @@ export default class App extends Component {
   }
 }
 
+//This is my React App Gallery project and I am seeking an exceeds grade based on changes added 
+//to include 1) a loading indicator displayed, 2) No matches found with message, & 3) 404 error
+//route that displays a message when the URL does no match an existing route.
