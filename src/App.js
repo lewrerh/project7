@@ -4,7 +4,6 @@ import './App.css';
 import PhotoList from './Components/PhotoList';
 import Nav from './Components/Nav';
 import NotFound from './Components/NotFound';
-import NoMatchesFound from'./Components/NoMatchesFound';
 import SearchForm from './Components/SearchForm';
 import apiKey from './config.js';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -55,7 +54,7 @@ export default class App extends Component {
           <SearchForm onSearch={this.performSearch} />
           <Nav isTrue={this.isTrue} onClick={this.performSearch} />
           {
-            (this.state.isLoading)
+            (this.state.loading)
               ? <p>Loading...</p>
               :
               <Switch>

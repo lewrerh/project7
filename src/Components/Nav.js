@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export default class Nav extends Component {
   ourLink = e => {
       this.props.onClick(e.target.innerText);
-      //this.props.istrue(true);
+     this.props.isTrue(true);
   }
 //Created Nav component & below removed href-a tags with links to navigate to each link
   render() {
