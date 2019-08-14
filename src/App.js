@@ -71,4 +71,5 @@ export default class App extends Component {
 
 //This is my React App Gallery project and I am seeking an exceeds grade based on changes added 
 //to include 1) a loading indicator displayed, 2) No matches found with message, & 3) 404 error
-//route that displays a message when the URL does no match an existing route.
+//route that displays a message when the URL does no match an existing route. I've also included
+//some changes to background/CSS changes.
